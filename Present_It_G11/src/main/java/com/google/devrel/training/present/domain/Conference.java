@@ -104,7 +104,8 @@ public class Conference {
     /**
      * Just making the default constructor private.
      */
-    private Conference() {}
+    @SuppressWarnings("unused")
+	private Conference() {}
 
     public Conference(final long id, final String organizerUserId,
                       final ConferenceForm conferenceForm) {

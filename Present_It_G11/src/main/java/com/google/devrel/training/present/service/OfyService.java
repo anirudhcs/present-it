@@ -1,6 +1,10 @@
 package com.google.devrel.training.present.service;
 
+import java.util.concurrent.ConcurrentSkipListSet;
+
 import com.google.devrel.training.present.domain.Conference;
+import com.google.devrel.training.present.domain.Person;
+import com.google.devrel.training.present.domain.Course;
 import com.google.devrel.training.present.domain.Profile;
 import com.googlecode.objectify.Objectify;
 import com.googlecode.objectify.ObjectifyFactory;
@@ -9,6 +13,7 @@ import com.googlecode.objectify.ObjectifyService;
 /**
  * Custom Objectify Service that this application should use.
  */
+@SuppressWarnings("unused")
 public class OfyService {
     /**
      * This static block ensure the entity registration.
@@ -16,6 +21,8 @@ public class OfyService {
     static {
         factory().register(Conference.class);
         factory().register(Profile.class);
+        factory().register(Person.class);
+        factory().register(Course.class);
     }
 
     /**
