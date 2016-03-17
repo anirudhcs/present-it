@@ -18,6 +18,10 @@ As and when we write corresponding files we can start to delete the oild files.
 
 
 Git commands:
+
+vim README.md to open 
 git add *
 git commit -m "commit comments"
 git push -u origin master
+
+
