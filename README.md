@@ -5,6 +5,7 @@
 #sneha
 =======
 #sruthi test
+anirudh again
 
 >>>>>>> origin/master
 The directory structure better remain the same, because I assume the pom.xml has been written with this directory structure in mind.
