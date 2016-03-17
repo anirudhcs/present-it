@@ -8,3 +8,8 @@ The webapp is currently the same as the webapp for the COnference central applic
 Each file remains as it is from the beginning of lesson 5. So every feature implemented until the end of Lesson 4 is already implemented in the code that is currently pushed.
 As and when we write corresponding files we can start to delete the oild files.
 
+
+Git commands:
+git add *
+git commit -m "commit comments"
+git push -u origin master
