@@ -1,10 +1,8 @@
 package com.google.devrel.training.present.domain;
 
-import static com.google.devrel.training.present.service.OfyService.ofy;
-import com.google.devrel.training.present.form.CourseForm;
-
 import com.google.api.server.spi.config.AnnotationBoolean;
 import com.google.api.server.spi.config.ApiResourceProperty;
+import com.google.devrel.training.present.form.CourseForm;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
@@ -32,6 +30,7 @@ public class Course{
 	
 	private int seatsAvailable;
 	
+	@SuppressWarnings("unused")
 	private Course() {}
 	
 	public Course(final long id, final String organizerUfid,
