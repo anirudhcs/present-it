@@ -15,6 +15,7 @@ public class Course{
 	@Id
     private long id;
 	
+	//for testing
 	private String courseId;
 	private String courseName;
 	
