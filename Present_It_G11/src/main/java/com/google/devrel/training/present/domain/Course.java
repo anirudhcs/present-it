@@ -15,7 +15,7 @@ public class Course{
 	@Id
     private long id;
 	
-	//for testing
+	//for testing Sruthi
 	private String courseId;
 	private String courseName;
 	
