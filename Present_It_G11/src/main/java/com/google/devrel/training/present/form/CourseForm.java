@@ -1,7 +1,5 @@
 package com.google.devrel.training.present.form;
 
-import com.google.devrel.training.present.domain.Course;
-
 public class CourseForm{
 	private String courseId;
 	private String courseName;
