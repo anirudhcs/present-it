@@ -11,7 +11,7 @@ public class PersonalProfile{
 	 */
 	private String firstName;
 	private String lastName;
-	private String mainEmail;
+	private String ufid;
 	
 	/**
 	 * the empty constructor
@@ -19,7 +19,7 @@ public class PersonalProfile{
 	PersonalProfile(){
 		firstName = "";
 		lastName = "";
-		mainEmail = "";
+		ufid = "";
 	}
 	
 	/**
@@ -29,7 +29,7 @@ public class PersonalProfile{
 	PersonalProfile(PersonalProfileForm form){
 		this.firstName = form.getFirstName();
 		this.lastName = form.getLastName();
-		this.mainEmail = form.getEmail();
+		this.ufid = form.getUfid();
 	}
 	
 	
@@ -55,8 +55,8 @@ public class PersonalProfile{
 	 * The getter function for the email
 	 * @return email
 	 */
-	public String getEmail(){
-		return mainEmail;
+	public String getUfid(){
+		return ufid;
 	}
 	
 	
@@ -68,7 +68,7 @@ public class PersonalProfile{
 	public void updatePersonalProfile(PersonalProfileForm form){
 		this.firstName = form.getFirstName();
 		this.lastName = form.getLastName();
-		this.mainEmail = form.getEmail();
+		this.ufid = form.getUfid();
 	}
 	
 }

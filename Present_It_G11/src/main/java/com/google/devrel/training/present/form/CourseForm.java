@@ -4,6 +4,7 @@ public class CourseForm{
 	private String courseId;
 	private String courseName;
 	private int maxAttendees;
+	private String description;
 	
 	CourseForm(){
 		courseId = "";
@@ -19,6 +20,10 @@ public class CourseForm{
 	
 	public String getCourseId(){
 		return courseId;
+	}
+	
+	public String getDescription(){
+		return description;
 	}
 	
 	public String getCourseName(){

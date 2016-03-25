@@ -7,7 +7,7 @@ public class PersonalProfileForm{
 	 */
 	private String firstName;
 	private String lastName;
-	private String email;
+	private String ufid;
 	
 	
 	/*
@@ -16,7 +16,7 @@ public class PersonalProfileForm{
 	PersonalProfileForm(){
 		firstName = "";
 		lastName = "";
-		email = "";
+		ufid = "";
 	}
 	
 	/**
@@ -24,10 +24,10 @@ public class PersonalProfileForm{
 	 * @param fName
 	 * @param lName
 	 */
-	PersonalProfileForm(String fName, String lName, String email){
+	PersonalProfileForm(String fName, String lName, String ufid){
 		this.firstName = fName;
 		this.lastName = lName;
-		this.email = email;
+		this.ufid = ufid;
 	}
 	
 	/**
@@ -47,7 +47,7 @@ public class PersonalProfileForm{
 		return lastName;
 	}
 	
-	public String getEmail(){
-		return email;
+	public String getUfid(){
+		return ufid;
 	}
 }

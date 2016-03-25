@@ -16,6 +16,7 @@ public class Course{
     private long id;
 	private String courseId;
 	private String courseName;
+	private String description;
 	
 	@Index
 	private int maxAttendees;
@@ -25,26 +26,31 @@ public class Course{
     private Key<Person> personKey;
 	
 	@ApiResourceProperty(ignored = AnnotationBoolean.TRUE)
-    private String organizerUfid;
+    private String organizerEmail;
 	
 	private int seatsAvailable;
 	
 	@SuppressWarnings("unused")
 	private Course() {}
 	
-	public Course(final long id, final String organizerUfid,
+	public Course(final long id, final String organizerEmail,
 	                final CourseForm form){
 		this.id = id;
-		this.organizerUfid = organizerUfid;
+		this.organizerEmail = organizerEmail;
 		this.courseId = form.getCourseId();
 		this.courseName = form.getCourseName();
 		this.maxAttendees = form.getMaxAttendees();
 		this.seatsAvailable = form.getMaxAttendees();
-		this.personKey = Key.create(Person.class, organizerUfid);
+		this.description = form.getDescription();
+		this.personKey = Key.create(Person.class, organizerEmail);
 	}
 	
 	public long getId(){
 		return id;
+	}
+	
+	public String getDescription(){
+		return description;
 	}
 	
 	public String getCourseId(){
@@ -64,8 +70,8 @@ public class Course{
 	}
 	
 	@ApiResourceProperty(ignored = AnnotationBoolean.TRUE)
-	public String getOrganizerUfid(){
-		return organizerUfid;
+	public String getOrganizerEmail(){
+		return organizerEmail;
 	}
 	
 	@ApiResourceProperty(ignored = AnnotationBoolean.TRUE)

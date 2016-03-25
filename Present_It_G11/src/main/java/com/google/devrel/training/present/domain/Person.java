@@ -13,13 +13,13 @@ import com.googlecode.objectify.annotation.Id;
 public class Person {
     private PersonalProfile profile;
     @Id 
-    private String ufid;
+    private String mainEmail;
     
 
     /**
-     * Keys of the conferences that this user registers to attend.
+     * Keys of the courses that this user registers to attend.
      */
-    private List<String> conferenceKeysToAttend = new ArrayList<>(0);
+    private List<String> courseKeysToAttend = new ArrayList<>(0);
 
     /**
      * Public constructor for Profile.
@@ -29,9 +29,13 @@ public class Person {
      * @param teeShirtSize The User's tee shirt size
      *
      */
-    public Person (String ufid, PersonalProfileForm form) {
-        this.ufid = ufid;
+    public Person (String mainEmail, PersonalProfileForm form) {
+        this.mainEmail = mainEmail;
         this.profile.updatePersonalProfile(form);
+    }
+    
+    public Person(String mainEmail){
+    	this.mainEmail = mainEmail;
     }
     
     /**
@@ -44,8 +48,8 @@ public class Person {
     	return profile;
     }
 
-    public String getUfid() {
-        return ufid;
+    public String getEmail() {
+        return mainEmail;
     }
     
     /**
@@ -60,39 +64,39 @@ public class Person {
 
     
     /**
-     * From here the functios need to be modified based on the course class
+     * From here the functions need to be modified based on the course class
      */
     /**
-     * Getter for conferenceIdsToAttend.
-     * @return an immutable copy of conferenceIdsToAttend.
+     * Getter for courseIdsToAttend.
+     * @return an immutable copy of courseIdsToAttend.
      */
-    public List<String> getConferenceKeysToAttend() {
-        return ImmutableList.copyOf(conferenceKeysToAttend);
+    public List<String> getCourseKeysToAttend() {
+        return ImmutableList.copyOf(courseKeysToAttend);
     }
 
 
     /**
-     * Adds a ConferenceId to conferenceIdsToAttend.
+     * Adds a CoursId to courseIdsToAttend.
      *
-     * The method initConferenceIdsToAttend is not thread-safe, but we need a transaction for
+     * The method initCourseIdsToAttend is not thread-safe, but we need a transaction for
      * calling this method after all, so it is not a practical issue.
      *
-     * @param conferenceKey a websafe String representation of the Conference Key.
+     * @param courseKey a websafe String representation of the Course Key.
      */
-    public void addToConferenceKeysToAttend(String conferenceKey) {
-        conferenceKeysToAttend.add(conferenceKey);
+    public void addToCourseKeysToAttend(String courseKey) {
+    	courseKeysToAttend.add(courseKey);
     }
 
     /**
-     * Remove the conferenceId from conferenceIdsToAttend.
+     * Remove the courseId from courseIdsToAttend.
      *
-     * @param conferenceKey a websafe String representation of the Conference Key.
+     * @param courseKey a websafe String representation of the Course Key.
      */
-    public void unregisterFromConference(String conferenceKey) {
-        if (conferenceKeysToAttend.contains(conferenceKey)) {
-            conferenceKeysToAttend.remove(conferenceKey);
+    public void unregisterFromCourse(String courseKey) {
+        if (courseKeysToAttend.contains(courseKey)) {
+        	courseKeysToAttend.remove(courseKey);
         } else {
-            throw new IllegalArgumentException("Invalid conferenceKey: " + conferenceKey);
+            throw new IllegalArgumentException("Invalid courseKey: " + courseKey);
         }
     }
 
