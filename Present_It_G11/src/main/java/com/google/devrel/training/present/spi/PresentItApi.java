@@ -30,7 +30,7 @@ import com.googlecode.objectify.cmd.Query;
  * Defines course APIs.
  */
 @SuppressWarnings("unused")
-@Api(name = "present-it", version = "v1", scopes = { Constants.EMAIL_SCOPE }, clientIds = { Constants.WEB_CLIENT_ID,
+@Api(name = "presentIt", version = "v1", scopes = { Constants.EMAIL_SCOPE }, clientIds = { Constants.WEB_CLIENT_ID,
 		Constants.API_EXPLORER_CLIENT_ID }, description = "API for the Present It Backend application.")
 public class PresentItApi {
 
@@ -71,7 +71,7 @@ public class PresentItApi {
 	 * 
 	 * @param user
 	 *            A User object injected by the cloud endpoints.
-	 * @return The profile of the user that is currently loged in
+	 * @return The profile of the user that is currently logged in
 	 * @throws UnauthorizedException
 	 *             if the user object is null
 	 */
