@@ -73,7 +73,7 @@
  */
  app.factory('oauth2Provider', function ($modal) {
  	var oauth2Provider = {
- 		CLIENT_ID: 'replace with your client id',
+ 		CLIENT_ID: '912681521056-mu7272f06v6hd1ptg32id635bvfk8a9v.apps.googleusercontent.com',
  		SCOPES: 'https://www.googleapis.com/auth/userinfo.email profile',
  		signedIn: false
  	};
