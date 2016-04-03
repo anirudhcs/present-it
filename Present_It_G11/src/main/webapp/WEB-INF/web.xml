@@ -5,7 +5,11 @@
         <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
         <init-param>
             <param-name>services</param-name>
+<<<<<<< HEAD
             <param-value>com.google.training.helloworld.HelloWorldEndpoints</param-value>
+=======
+            <param-value>com.google.devrel.training.conference.spi.ConferenceApi</param-value>
+>>>>>>> parent of 795a650... removing faulty files in the webapp folder
         </init-param>
     </servlet>
     <servlet-mapping>
@@ -15,7 +19,11 @@
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>
+<<<<<<< HEAD
     <security-constraint>
+=======
+     <security-constraint>
+>>>>>>> parent of 795a650... removing faulty files in the webapp folder
         <web-resource-collection>
             <web-resource-name>all</web-resource-name>
             <url-pattern>/*</url-pattern>
